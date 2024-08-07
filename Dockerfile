@@ -56,8 +56,8 @@ RUN apt-get -y install vim && \
 
 # Clone repos
 RUN git clone --recursive  --branch main --depth 1 https://github.com/galilasmb/joana_execution /home/joana_execution
-# clone mergedataset to /home/joana_execution/conflicts_analyzer/downloads
 
+# clone mergedataset to /home/joana_execution/conflicts_analyzer/downloads
 RUN git clone --branch sdg-dataset --depth 1 https://github.com/galilasmb/mergedataset /home/temp_dataset && \
     mv /home/temp_dataset/* /home/joana_execution/conflicts_analyzer/downloads/ && \
     rm -rf /home/temp_dataset
