@@ -59,6 +59,10 @@ RUN git clone --recursive  --branch main --depth 1 https://github.com/galilasmb/
 # clone mergedataset to /home/joana_execution/conflicts_analyzer/downloads
 RUN git clone --branch sdg-dataset --depth 1 https://github.com/galilasmb/mergedataset /home/joana_execution/conflicts_analyzer/downloads
 
+RUN git clone --branch sdg-dataset --depth 1 https://github.com/galilasmb/mergedataset /home/temp_dataset && \
+    mv /home/temp_dataset/* /home/joana_execution/conflicts_analyzer/downloads/ && \
+    rm -rf /home/temp_dataset
+
 # Add settings.xml
 ADD ./settings.xml $USER_HOME_DIR/.m2/
 
