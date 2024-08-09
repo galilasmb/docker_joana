@@ -40,34 +40,19 @@ For remote access, run:
 
 ## Running the experiment n times
 
-Access the miningframework project folder
+Access the execution_joana project folder
 
-`cd /home/miningframework`
+`cd /home/execution_joana`
 
 To run the experiment, use the following commands:
 
-`chmod +x scripts/run_static_analyses_experiment.sh && ./scripts/run_static_analyses_experiment.sh <n>`
-
-You can pass the number (n) of times as an argument, the default is ten.
-
-### To copy the files results:
-
-`docker cp <container-id>:/home/miningframework/output/results <your-path>`
-
-## Analyze scenarios
-
-At the miningframework root, if you want to run the analyzes outside the experiment infrastructure, you can run for example:
-
-`./gradlew run -DmainClass="services.outputProcessors.soot.Main" --args="-icf -ioa -idfp -pdg -report"`
+`python2.7 ./script.py`
 
 ### To copy the files results:
 
 ```
-docker cp <container-id>:/home/miningframework/out.txt <your-path>  
-docker cp <container-id>:/home/miningframework/outConsole.txt <your-path>  
-docker cp <container-id>:/home/miningframework/time.txt <your-path>  
-docker cp <container-id>:/home/miningframework/output/data/soot-results.csv <your-path>  
-docker cp <container-id>:/home/miningframework/output/data/results.pdf <your-path>  
+docker cp <container-id>:/home/joana_execution/joana/reports
+docker cp <container-id>:/home/joana_execution/joana/sdgs`
 ```
 
 ## Closing Docker Containers
