@@ -51,8 +51,7 @@ To run the experiment, use the following commands:
 ### To copy the files results:
 
 ```
-docker cp <container-id>:/home/joana_execution/joana/reports
-docker cp <container-id>:/home/joana_execution/joana/sdgs`
+docker cp f69f7e6ca1c3:/home/joana_execution/joana ./joana
 ```
 
 ## Closing Docker Containers
